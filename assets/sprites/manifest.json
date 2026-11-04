@@ -1,0 +1,98 @@
+{
+  "source_repository": "https://github.com/PokeAPI/sprites",
+  "revision": "1b3b7c0a538dd2226ae08d0d2f8955125075bbd4",
+  "generation": "II",
+  "game": "Crystal",
+  "sprites": [
+    {
+      "name": "Bulbasaur",
+      "file": "bulbasaur.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/1.png",
+      "sha256": "629e968a5b8f8d0258600e35e1c55a394c0f3a4c6c06190d0b8cd0ccaaf76487",
+      "dimensions": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Charmander",
+      "file": "charmander.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/4.png",
+      "sha256": "d928d42daa07d4f97a15dbecf656a4c3000413c707714c2762bdea32a89bcbbd",
+      "dimensions": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Squirtle",
+      "file": "squirtle.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/7.png",
+      "sha256": "29aa86d7ab948e934435eb0c2d45d67fd47c3281a2b3e901b966d232a231dd30",
+      "dimensions": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Pikachu",
+      "file": "pikachu.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/25.png",
+      "sha256": "e049eb03cb2ee5185f9467b407ef017d2b29787a6899414f520ea76dbac9f89f",
+      "dimensions": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Ekans",
+      "file": "ekans.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/23.png",
+      "sha256": "92272596ddf5aa1de1a2977e1e14c114c781891daaaa76e4507dfc0c8844cbac",
+      "dimensions": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Meowth",
+      "file": "meowth.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/52.png",
+      "sha256": "93657f9768551295d44aa9b7bd21333fceb11b8efa6888616d84a989b72e57e9",
+      "dimensions": [
+        40,
+        40
+      ]
+    },
+    {
+      "name": "Koffing",
+      "file": "koffing.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/109.png",
+      "sha256": "605b0ee47f472c0b471893bf97bd9b8ee8060e521243a5e3dce23e2ad1cd0f26",
+      "dimensions": [
+        48,
+        48
+      ]
+    },
+    {
+      "name": "Mewtwo",
+      "file": "mewtwo.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/150.png",
+      "sha256": "3023dfd0fd09446c34e36ec97085a0420a46ca8bf47ae66c5ecd976bd2236b43",
+      "dimensions": [
+        56,
+        56
+      ]
+    },
+    {
+      "name": "Chansey",
+      "file": "chansey.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/1b3b7c0a538dd2226ae08d0d2f8955125075bbd4/sprites/pokemon/versions/generation-ii/crystal/113.png",
+      "sha256": "a7dea536cd0b5885da905f2317d900b1e0ad20b8852476e9abc7cb9131005a95",
+      "dimensions": [
+        48,
+        48
+      ]
+    }
+  ]
+}

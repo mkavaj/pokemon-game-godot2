@@ -1,0 +1,31 @@
+name: Godot physics checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  forest-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Godot 4.6.3 with SHA-512 verification
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl --fail --location --retry 3 --output godot.zip \
+            https://github.com/godotengine/godot-builds/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip
+          echo 'a035258da32b77f966a5376f9fa29c30a6adde826a85ba918e1605bd1fc9823eba7d85f1dd5e748956bd2ba72827c0025ffa11bb82aec91128c407a2e723c99c  godot.zip' | sha512sum --check --strict
+          unzip -q godot.zip -d godot
+          chmod +x godot/Godot_v4.6.3-stable_linux.x86_64
+          echo "$RUNNER_TEMP/godot" >> "$GITHUB_PATH"
+      - name: Import project assets
+        run: Godot_v4.6.3-stable_linux.x86_64 --headless --editor --import --quit
+      - name: Run physics and route checks
+        run: Godot_v4.6.3-stable_linux.x86_64 --headless --script tests/test_forest.gd --fixed-fps 60

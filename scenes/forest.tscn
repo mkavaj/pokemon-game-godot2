@@ -1,0 +1,6559 @@
+[gd_scene load_steps=11 format=3]
+[ext_resource type="Script" path="res://scripts/forest.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/ground.gd" id="2"]
+[ext_resource type="Script" path="res://scripts/prop.gd" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="4"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="5"]
+[ext_resource type="AudioStream" path="res://assets/audio/forest.wav" id="6"]
+[sub_resource type="RectangleShape2D" id="Wall"]
+size = Vector2(64, 64)
+[sub_resource type="CircleShape2D" id="Trunk"]
+radius = 17.0
+[sub_resource type="RectangleShape2D" id="Rock"]
+size = Vector2(60, 25)
+[sub_resource type="RectangleShape2D" id="Log"]
+size = Vector2(90, 24)
+[node name="Forest" type="Node2D"]
+script = ExtResource("1")
+[node name="Ground" type="Node2D" parent="."]
+z_index = -2
+script = ExtResource("2")
+[node name="World" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="ForestWall_0_0" type="StaticBody2D" parent="World"]
+position = Vector2(32, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_0" type="StaticBody2D" parent="World"]
+position = Vector2(96, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_0" type="StaticBody2D" parent="World"]
+position = Vector2(160, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_0" type="StaticBody2D" parent="World"]
+position = Vector2(224, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_0" type="StaticBody2D" parent="World"]
+position = Vector2(288, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_0" type="StaticBody2D" parent="World"]
+position = Vector2(352, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_0" type="StaticBody2D" parent="World"]
+position = Vector2(416, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_0" type="StaticBody2D" parent="World"]
+position = Vector2(480, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_0" type="StaticBody2D" parent="World"]
+position = Vector2(544, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_0" type="StaticBody2D" parent="World"]
+position = Vector2(608, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_0" type="StaticBody2D" parent="World"]
+position = Vector2(672, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_0" type="StaticBody2D" parent="World"]
+position = Vector2(736, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_0" type="StaticBody2D" parent="World"]
+position = Vector2(800, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_0" type="StaticBody2D" parent="World"]
+position = Vector2(864, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_0" type="StaticBody2D" parent="World"]
+position = Vector2(928, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_0" type="StaticBody2D" parent="World"]
+position = Vector2(992, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_0" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_0" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_0" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_0" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_0" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_0" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_0" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_0" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_0" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_0" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_0" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_0" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_0" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_0" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_0" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_0" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_0" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_0" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_0" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_0" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 60)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_0"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_1" type="StaticBody2D" parent="World"]
+position = Vector2(32, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_1" type="StaticBody2D" parent="World"]
+position = Vector2(96, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_1" type="StaticBody2D" parent="World"]
+position = Vector2(160, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_1" type="StaticBody2D" parent="World"]
+position = Vector2(224, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_1" type="StaticBody2D" parent="World"]
+position = Vector2(288, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_1" type="StaticBody2D" parent="World"]
+position = Vector2(352, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_1" type="StaticBody2D" parent="World"]
+position = Vector2(416, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_1" type="StaticBody2D" parent="World"]
+position = Vector2(480, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_1" type="StaticBody2D" parent="World"]
+position = Vector2(544, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_1" type="StaticBody2D" parent="World"]
+position = Vector2(608, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_1" type="StaticBody2D" parent="World"]
+position = Vector2(672, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_1" type="StaticBody2D" parent="World"]
+position = Vector2(736, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_1" type="StaticBody2D" parent="World"]
+position = Vector2(800, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_1" type="StaticBody2D" parent="World"]
+position = Vector2(864, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_1" type="StaticBody2D" parent="World"]
+position = Vector2(928, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_1" type="StaticBody2D" parent="World"]
+position = Vector2(992, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_1" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_1" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_1" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_1" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_1" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_1" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_1" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_1" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_1" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_1" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_1" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_1" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_1" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_1" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_1" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_1" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_1" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_1" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_1" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_1" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 124)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_1"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_2" type="StaticBody2D" parent="World"]
+position = Vector2(32, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_2" type="StaticBody2D" parent="World"]
+position = Vector2(96, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_2" type="StaticBody2D" parent="World"]
+position = Vector2(160, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_2" type="StaticBody2D" parent="World"]
+position = Vector2(224, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_2" type="StaticBody2D" parent="World"]
+position = Vector2(288, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_2" type="StaticBody2D" parent="World"]
+position = Vector2(352, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_2" type="StaticBody2D" parent="World"]
+position = Vector2(416, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_2" type="StaticBody2D" parent="World"]
+position = Vector2(480, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_2" type="StaticBody2D" parent="World"]
+position = Vector2(544, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_2" type="StaticBody2D" parent="World"]
+position = Vector2(608, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_2" type="StaticBody2D" parent="World"]
+position = Vector2(672, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_2" type="StaticBody2D" parent="World"]
+position = Vector2(736, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_2" type="StaticBody2D" parent="World"]
+position = Vector2(800, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_2" type="StaticBody2D" parent="World"]
+position = Vector2(864, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_2" type="StaticBody2D" parent="World"]
+position = Vector2(928, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_2" type="StaticBody2D" parent="World"]
+position = Vector2(992, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_2" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_2" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_2" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_2" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_2" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_2" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_2" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_2" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_2" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_2" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_2" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_2" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_2" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_2" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_2" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_2" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_2" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_2" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_2" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_2" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 188)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_2"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_3" type="StaticBody2D" parent="World"]
+position = Vector2(32, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_3" type="StaticBody2D" parent="World"]
+position = Vector2(96, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_3" type="StaticBody2D" parent="World"]
+position = Vector2(160, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_3" type="StaticBody2D" parent="World"]
+position = Vector2(224, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_3" type="StaticBody2D" parent="World"]
+position = Vector2(288, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_3" type="StaticBody2D" parent="World"]
+position = Vector2(352, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_3" type="StaticBody2D" parent="World"]
+position = Vector2(416, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_3" type="StaticBody2D" parent="World"]
+position = Vector2(480, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_3" type="StaticBody2D" parent="World"]
+position = Vector2(544, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_3" type="StaticBody2D" parent="World"]
+position = Vector2(608, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_3" type="StaticBody2D" parent="World"]
+position = Vector2(672, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_3" type="StaticBody2D" parent="World"]
+position = Vector2(736, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_3" type="StaticBody2D" parent="World"]
+position = Vector2(800, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_3" type="StaticBody2D" parent="World"]
+position = Vector2(864, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_3" type="StaticBody2D" parent="World"]
+position = Vector2(928, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_3" type="StaticBody2D" parent="World"]
+position = Vector2(992, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_3" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_3" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_3" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_3" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_3" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_3" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_3" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_3" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_3" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_3" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_3" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_3" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 252)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_3"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_4" type="StaticBody2D" parent="World"]
+position = Vector2(32, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_4" type="StaticBody2D" parent="World"]
+position = Vector2(96, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_4" type="StaticBody2D" parent="World"]
+position = Vector2(160, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_4" type="StaticBody2D" parent="World"]
+position = Vector2(224, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_4" type="StaticBody2D" parent="World"]
+position = Vector2(288, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_4" type="StaticBody2D" parent="World"]
+position = Vector2(352, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_4" type="StaticBody2D" parent="World"]
+position = Vector2(416, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_4" type="StaticBody2D" parent="World"]
+position = Vector2(480, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_4" type="StaticBody2D" parent="World"]
+position = Vector2(544, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_4" type="StaticBody2D" parent="World"]
+position = Vector2(608, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_4" type="StaticBody2D" parent="World"]
+position = Vector2(672, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_4" type="StaticBody2D" parent="World"]
+position = Vector2(736, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_4" type="StaticBody2D" parent="World"]
+position = Vector2(800, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_4" type="StaticBody2D" parent="World"]
+position = Vector2(864, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_4" type="StaticBody2D" parent="World"]
+position = Vector2(928, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_4" type="StaticBody2D" parent="World"]
+position = Vector2(992, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_4" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_4" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_4" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_4" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_4" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_4" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_4" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_4" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_4" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_4" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_4" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_4" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 316)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_4"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_5" type="StaticBody2D" parent="World"]
+position = Vector2(32, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_5" type="StaticBody2D" parent="World"]
+position = Vector2(96, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_5" type="StaticBody2D" parent="World"]
+position = Vector2(160, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_5" type="StaticBody2D" parent="World"]
+position = Vector2(224, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_5" type="StaticBody2D" parent="World"]
+position = Vector2(288, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_5" type="StaticBody2D" parent="World"]
+position = Vector2(352, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_5" type="StaticBody2D" parent="World"]
+position = Vector2(416, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_5" type="StaticBody2D" parent="World"]
+position = Vector2(480, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_5" type="StaticBody2D" parent="World"]
+position = Vector2(544, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_5" type="StaticBody2D" parent="World"]
+position = Vector2(608, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_5" type="StaticBody2D" parent="World"]
+position = Vector2(672, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_5" type="StaticBody2D" parent="World"]
+position = Vector2(736, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_5" type="StaticBody2D" parent="World"]
+position = Vector2(800, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_5" type="StaticBody2D" parent="World"]
+position = Vector2(864, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_5" type="StaticBody2D" parent="World"]
+position = Vector2(928, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_5" type="StaticBody2D" parent="World"]
+position = Vector2(992, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_5" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_5" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_5" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_5" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_5" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_5" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_5" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_5" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_5" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_5" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_5" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_5" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 380)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_5"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_6" type="StaticBody2D" parent="World"]
+position = Vector2(32, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_6" type="StaticBody2D" parent="World"]
+position = Vector2(96, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_6" type="StaticBody2D" parent="World"]
+position = Vector2(160, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_6" type="StaticBody2D" parent="World"]
+position = Vector2(224, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_6" type="StaticBody2D" parent="World"]
+position = Vector2(288, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_6" type="StaticBody2D" parent="World"]
+position = Vector2(352, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_6" type="StaticBody2D" parent="World"]
+position = Vector2(416, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_6" type="StaticBody2D" parent="World"]
+position = Vector2(480, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_6" type="StaticBody2D" parent="World"]
+position = Vector2(544, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_6" type="StaticBody2D" parent="World"]
+position = Vector2(608, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_6" type="StaticBody2D" parent="World"]
+position = Vector2(672, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_6" type="StaticBody2D" parent="World"]
+position = Vector2(736, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_6" type="StaticBody2D" parent="World"]
+position = Vector2(800, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_6" type="StaticBody2D" parent="World"]
+position = Vector2(864, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_6" type="StaticBody2D" parent="World"]
+position = Vector2(928, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_6" type="StaticBody2D" parent="World"]
+position = Vector2(992, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_6" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_6" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_6" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_6" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_6" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_6" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_6" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_6" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_6" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_6" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_6" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_6" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 444)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_6"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_7" type="StaticBody2D" parent="World"]
+position = Vector2(32, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_7" type="StaticBody2D" parent="World"]
+position = Vector2(96, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_7" type="StaticBody2D" parent="World"]
+position = Vector2(160, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_7" type="StaticBody2D" parent="World"]
+position = Vector2(224, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_7" type="StaticBody2D" parent="World"]
+position = Vector2(288, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_7" type="StaticBody2D" parent="World"]
+position = Vector2(352, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_7" type="StaticBody2D" parent="World"]
+position = Vector2(416, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_7" type="StaticBody2D" parent="World"]
+position = Vector2(480, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_7" type="StaticBody2D" parent="World"]
+position = Vector2(544, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_7" type="StaticBody2D" parent="World"]
+position = Vector2(608, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_7" type="StaticBody2D" parent="World"]
+position = Vector2(672, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_7" type="StaticBody2D" parent="World"]
+position = Vector2(736, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_7" type="StaticBody2D" parent="World"]
+position = Vector2(800, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_7" type="StaticBody2D" parent="World"]
+position = Vector2(864, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_7" type="StaticBody2D" parent="World"]
+position = Vector2(928, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_7" type="StaticBody2D" parent="World"]
+position = Vector2(992, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_7" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_7" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_7" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_7" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_7" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_7" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_7" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_7" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_7" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_7" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_7" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_7" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 508)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_7"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_8" type="StaticBody2D" parent="World"]
+position = Vector2(32, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_8" type="StaticBody2D" parent="World"]
+position = Vector2(96, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_8" type="StaticBody2D" parent="World"]
+position = Vector2(160, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_8" type="StaticBody2D" parent="World"]
+position = Vector2(224, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_8" type="StaticBody2D" parent="World"]
+position = Vector2(288, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_8" type="StaticBody2D" parent="World"]
+position = Vector2(352, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_8" type="StaticBody2D" parent="World"]
+position = Vector2(416, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_8" type="StaticBody2D" parent="World"]
+position = Vector2(480, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_8" type="StaticBody2D" parent="World"]
+position = Vector2(544, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_8" type="StaticBody2D" parent="World"]
+position = Vector2(608, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_8" type="StaticBody2D" parent="World"]
+position = Vector2(672, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_8" type="StaticBody2D" parent="World"]
+position = Vector2(736, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_8" type="StaticBody2D" parent="World"]
+position = Vector2(800, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_8" type="StaticBody2D" parent="World"]
+position = Vector2(864, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_8" type="StaticBody2D" parent="World"]
+position = Vector2(928, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_8" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_8" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_8" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_8" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 572)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_8"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_9" type="StaticBody2D" parent="World"]
+position = Vector2(32, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_9" type="StaticBody2D" parent="World"]
+position = Vector2(96, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_9" type="StaticBody2D" parent="World"]
+position = Vector2(160, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_9" type="StaticBody2D" parent="World"]
+position = Vector2(224, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_9" type="StaticBody2D" parent="World"]
+position = Vector2(288, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_9" type="StaticBody2D" parent="World"]
+position = Vector2(352, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_9" type="StaticBody2D" parent="World"]
+position = Vector2(416, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_9" type="StaticBody2D" parent="World"]
+position = Vector2(480, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_9" type="StaticBody2D" parent="World"]
+position = Vector2(544, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_9" type="StaticBody2D" parent="World"]
+position = Vector2(608, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_9" type="StaticBody2D" parent="World"]
+position = Vector2(672, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_9" type="StaticBody2D" parent="World"]
+position = Vector2(736, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_9" type="StaticBody2D" parent="World"]
+position = Vector2(800, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_9" type="StaticBody2D" parent="World"]
+position = Vector2(864, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_9" type="StaticBody2D" parent="World"]
+position = Vector2(928, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_9" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_9" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 636)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_9"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_10" type="StaticBody2D" parent="World"]
+position = Vector2(32, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_10" type="StaticBody2D" parent="World"]
+position = Vector2(96, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_10" type="StaticBody2D" parent="World"]
+position = Vector2(160, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_10" type="StaticBody2D" parent="World"]
+position = Vector2(224, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_10" type="StaticBody2D" parent="World"]
+position = Vector2(288, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_10" type="StaticBody2D" parent="World"]
+position = Vector2(352, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_10" type="StaticBody2D" parent="World"]
+position = Vector2(416, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_10" type="StaticBody2D" parent="World"]
+position = Vector2(480, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_10" type="StaticBody2D" parent="World"]
+position = Vector2(544, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_10" type="StaticBody2D" parent="World"]
+position = Vector2(608, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_10" type="StaticBody2D" parent="World"]
+position = Vector2(672, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_10" type="StaticBody2D" parent="World"]
+position = Vector2(736, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_10" type="StaticBody2D" parent="World"]
+position = Vector2(800, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_10" type="StaticBody2D" parent="World"]
+position = Vector2(864, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_10" type="StaticBody2D" parent="World"]
+position = Vector2(928, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_10" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_10" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 700)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_10"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_11" type="StaticBody2D" parent="World"]
+position = Vector2(32, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_11" type="StaticBody2D" parent="World"]
+position = Vector2(96, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_11" type="StaticBody2D" parent="World"]
+position = Vector2(160, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_11" type="StaticBody2D" parent="World"]
+position = Vector2(224, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_11" type="StaticBody2D" parent="World"]
+position = Vector2(288, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_11" type="StaticBody2D" parent="World"]
+position = Vector2(352, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_11" type="StaticBody2D" parent="World"]
+position = Vector2(416, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_11" type="StaticBody2D" parent="World"]
+position = Vector2(480, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_11" type="StaticBody2D" parent="World"]
+position = Vector2(544, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_11" type="StaticBody2D" parent="World"]
+position = Vector2(608, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_11" type="StaticBody2D" parent="World"]
+position = Vector2(672, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_11" type="StaticBody2D" parent="World"]
+position = Vector2(736, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_11" type="StaticBody2D" parent="World"]
+position = Vector2(800, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_11" type="StaticBody2D" parent="World"]
+position = Vector2(864, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_11" type="StaticBody2D" parent="World"]
+position = Vector2(928, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_11" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_11" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_11" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_11" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 764)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_11"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_12" type="StaticBody2D" parent="World"]
+position = Vector2(32, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_12" type="StaticBody2D" parent="World"]
+position = Vector2(96, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_12" type="StaticBody2D" parent="World"]
+position = Vector2(800, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_12" type="StaticBody2D" parent="World"]
+position = Vector2(864, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_12" type="StaticBody2D" parent="World"]
+position = Vector2(928, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_12" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_12" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_12" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_12" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 828)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_12"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_13" type="StaticBody2D" parent="World"]
+position = Vector2(32, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_13" type="StaticBody2D" parent="World"]
+position = Vector2(96, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_13" type="StaticBody2D" parent="World"]
+position = Vector2(800, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_13" type="StaticBody2D" parent="World"]
+position = Vector2(864, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_13" type="StaticBody2D" parent="World"]
+position = Vector2(928, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_13" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_13" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_13" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_13" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_13" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_13" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_13" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_13" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_13" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_13" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_13" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_13" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 892)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_13"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_14" type="StaticBody2D" parent="World"]
+position = Vector2(32, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_14" type="StaticBody2D" parent="World"]
+position = Vector2(96, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_14" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_14" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_14" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_14" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_14" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_14" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_14" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_14" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_14" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_14" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_14" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_14" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 956)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_14"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_15" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_15" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_15" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_15" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_15" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_15" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_15" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_15" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_15" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_15" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_15" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_15" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_15" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_15" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1020)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_15"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_16" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_16" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_16" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_16" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_16" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_16" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_16" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_16" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_16" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_16" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_16" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_16" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_16" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_16" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_16" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_16" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_16" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1084)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_16"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_17" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_17" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_17" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_17" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_17" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_17" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_17" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_17" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_17" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_17" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_17" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_17" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_17" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_17" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_17" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_17" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_17" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1148)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_17"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_18" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_18" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_18" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_18" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_18" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_18" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_18" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_18" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_18" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_18" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_18" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_18" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_18" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_18" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_18" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_18" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_18" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1212)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_18"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_19" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_19" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_19" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_19" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_19" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_19" type="StaticBody2D" parent="World"]
+position = Vector2(992, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_19" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_19" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_19" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_19" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_19" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_19" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_19" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_19" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_19" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_19" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_19" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_19" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_19" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_19" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_19" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_19" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_19" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_19" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_19" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_19" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1276)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_19"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_20" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_20" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_20" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_20" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_20" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_20" type="StaticBody2D" parent="World"]
+position = Vector2(992, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_20" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_20" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_20" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_20" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_20" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_20" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_20" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_20" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_20" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_20" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_20" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_20" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_20" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_20" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_20" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_20" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_20" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_20" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_20" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_20" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1340)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_20"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_21" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_21" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_21" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_21" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_21" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_21" type="StaticBody2D" parent="World"]
+position = Vector2(992, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_21" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_21" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_21" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_21" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_21" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_21" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_21" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_21" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_21" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_21" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_21" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_21" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_21" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_21" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_21" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_21" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_21" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_21" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_21" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_21" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1404)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_21"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_22" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_22" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_22" type="StaticBody2D" parent="World"]
+position = Vector2(160, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_22" type="StaticBody2D" parent="World"]
+position = Vector2(224, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_22" type="StaticBody2D" parent="World"]
+position = Vector2(288, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_22" type="StaticBody2D" parent="World"]
+position = Vector2(352, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_22" type="StaticBody2D" parent="World"]
+position = Vector2(416, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_22" type="StaticBody2D" parent="World"]
+position = Vector2(480, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_22" type="StaticBody2D" parent="World"]
+position = Vector2(544, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_22" type="StaticBody2D" parent="World"]
+position = Vector2(608, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_22" type="StaticBody2D" parent="World"]
+position = Vector2(672, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_22" type="StaticBody2D" parent="World"]
+position = Vector2(736, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_22" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_22" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_22" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_22" type="StaticBody2D" parent="World"]
+position = Vector2(992, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_22" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_22" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_22" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_22" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_22" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_22" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_22" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_22" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_22" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_22" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_22" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_22" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_22" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_22" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_22" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_22" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_22" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_22" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_22" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_22" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1468)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_22"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_0_23" type="StaticBody2D" parent="World"]
+position = Vector2(32, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_0_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_1_23" type="StaticBody2D" parent="World"]
+position = Vector2(96, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_1_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_2_23" type="StaticBody2D" parent="World"]
+position = Vector2(160, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_2_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_3_23" type="StaticBody2D" parent="World"]
+position = Vector2(224, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_3_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_4_23" type="StaticBody2D" parent="World"]
+position = Vector2(288, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_4_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_5_23" type="StaticBody2D" parent="World"]
+position = Vector2(352, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_5_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_6_23" type="StaticBody2D" parent="World"]
+position = Vector2(416, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_6_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_7_23" type="StaticBody2D" parent="World"]
+position = Vector2(480, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_7_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_8_23" type="StaticBody2D" parent="World"]
+position = Vector2(544, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_8_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_9_23" type="StaticBody2D" parent="World"]
+position = Vector2(608, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_9_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_10_23" type="StaticBody2D" parent="World"]
+position = Vector2(672, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_10_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_11_23" type="StaticBody2D" parent="World"]
+position = Vector2(736, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_11_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_12_23" type="StaticBody2D" parent="World"]
+position = Vector2(800, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_12_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_13_23" type="StaticBody2D" parent="World"]
+position = Vector2(864, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_13_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_14_23" type="StaticBody2D" parent="World"]
+position = Vector2(928, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_14_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_15_23" type="StaticBody2D" parent="World"]
+position = Vector2(992, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_15_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_16_23" type="StaticBody2D" parent="World"]
+position = Vector2(1056, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_16_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_17_23" type="StaticBody2D" parent="World"]
+position = Vector2(1120, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_17_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_18_23" type="StaticBody2D" parent="World"]
+position = Vector2(1184, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_18_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_19_23" type="StaticBody2D" parent="World"]
+position = Vector2(1248, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_19_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_20_23" type="StaticBody2D" parent="World"]
+position = Vector2(1312, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_20_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_21_23" type="StaticBody2D" parent="World"]
+position = Vector2(1376, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_21_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_22_23" type="StaticBody2D" parent="World"]
+position = Vector2(1440, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_22_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_23_23" type="StaticBody2D" parent="World"]
+position = Vector2(1504, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_23_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_24_23" type="StaticBody2D" parent="World"]
+position = Vector2(1568, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_24_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_25_23" type="StaticBody2D" parent="World"]
+position = Vector2(1632, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_25_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_26_23" type="StaticBody2D" parent="World"]
+position = Vector2(1696, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_26_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_27_23" type="StaticBody2D" parent="World"]
+position = Vector2(1760, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_27_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_28_23" type="StaticBody2D" parent="World"]
+position = Vector2(1824, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_28_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_29_23" type="StaticBody2D" parent="World"]
+position = Vector2(1888, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_29_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_30_23" type="StaticBody2D" parent="World"]
+position = Vector2(1952, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_30_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_31_23" type="StaticBody2D" parent="World"]
+position = Vector2(2016, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_31_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_32_23" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_32_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_33_23" type="StaticBody2D" parent="World"]
+position = Vector2(2144, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_33_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_34_23" type="StaticBody2D" parent="World"]
+position = Vector2(2208, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_34_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="ForestWall_35_23" type="StaticBody2D" parent="World"]
+position = Vector2(2272, 1532)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/ForestWall_35_23"]
+position = Vector2(0, -28)
+shape = SubResource("Wall")
+
+[node name="Tree0" type="StaticBody2D" parent="World"]
+position = Vector2(250, 950)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Tree0"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree1" type="StaticBody2D" parent="World"]
+position = Vector2(440, 1330)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/Tree1"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree2" type="StaticBody2D" parent="World"]
+position = Vector2(650, 800)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/Tree2"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree3" type="StaticBody2D" parent="World"]
+position = Vector2(1000, 720)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Tree3"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree4" type="StaticBody2D" parent="World"]
+position = Vector2(1430, 1080)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/Tree4"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree5" type="StaticBody2D" parent="World"]
+position = Vector2(1740, 680)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 2
+[node name="Collision" type="CollisionShape2D" parent="World/Tree5"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree6" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 520)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Tree6"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Tree7" type="StaticBody2D" parent="World"]
+position = Vector2(1810, 290)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 0
+variant = 1
+[node name="Collision" type="CollisionShape2D" parent="World/Tree7"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Rock0" type="StaticBody2D" parent="World"]
+position = Vector2(670, 1260)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 1
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Rock0"]
+position = Vector2(0, -10)
+shape = SubResource("Rock")
+
+[node name="Rock1" type="StaticBody2D" parent="World"]
+position = Vector2(1050, 1050)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 1
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Rock1"]
+position = Vector2(0, -10)
+shape = SubResource("Rock")
+
+[node name="Rock2" type="StaticBody2D" parent="World"]
+position = Vector2(1360, 720)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 1
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Rock2"]
+position = Vector2(0, -10)
+shape = SubResource("Rock")
+
+[node name="Rock3" type="StaticBody2D" parent="World"]
+position = Vector2(2080, 360)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 1
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Rock3"]
+position = Vector2(0, -10)
+shape = SubResource("Rock")
+
+[node name="Log0" type="StaticBody2D" parent="World"]
+position = Vector2(300, 850)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 2
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Log0"]
+position = Vector2(0, -12)
+shape = SubResource("Log")
+
+[node name="Log1" type="StaticBody2D" parent="World"]
+position = Vector2(1400, 570)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 2
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Log1"]
+position = Vector2(0, -12)
+shape = SubResource("Log")
+
+[node name="Log2" type="StaticBody2D" parent="World"]
+position = Vector2(2010, 730)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 2
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Log2"]
+position = Vector2(0, -12)
+shape = SubResource("Log")
+
+[node name="Sign0" type="StaticBody2D" parent="World"]
+position = Vector2(690, 1040)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 3
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Sign0"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Sign1" type="StaticBody2D" parent="World"]
+position = Vector2(1410, 830)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 3
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Sign1"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Sign2" type="StaticBody2D" parent="World"]
+position = Vector2(2010, 300)
+collision_layer = 1
+collision_mask = 2
+script = ExtResource("3")
+kind = 3
+variant = 0
+[node name="Collision" type="CollisionShape2D" parent="World/Sign2"]
+position = Vector2(0, -5)
+shape = SubResource("Trunk")
+
+[node name="Player" parent="World" instance=ExtResource("4")]
+position = Vector2(320, 1180)
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6")
+volume_db = -22.0
+[node name="HUD" type="CanvasLayer" parent="."]
+[node name="Interface" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource("5")

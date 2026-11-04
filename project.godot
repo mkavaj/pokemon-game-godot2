@@ -1,0 +1,21 @@
+; Open with Godot 4.6 or later.
+config_version=5
+
+[application]
+config/name="Shadowbound • Forest Trail"
+run/main_scene="res://scenes/forest.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/description="A top-down 2D laboratory exercise using the supplied Shadowbound materials."
+
+[display]
+window/size/viewport_width=1152
+window/size/viewport_height=768
+window/size/window_width_override=1152
+window/size/window_height_override=768
+window/stretch/mode="canvas_items"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.055, 0.10, 0.09, 1)
