@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/pokemon_sprite.gd" id="2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/ekans.png" id="3"]
+[sub_resource type="CircleShape2D" id="Body"]
+radius = 13.0
+[sub_resource type="CircleShape2D" id="Contact"]
+radius = 22.0
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1")
+[node name="Feet" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("Body")
+[node name="Visual" type="Sprite2D" parent="."]
+position = Vector2(0, -28)
+scale = Vector2(2, 2)
+texture = ExtResource("3")
+script = ExtResource("2")
+pokemon = "ekans"
+[node name="Contact" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+[node name="Shape" type="CollisionShape2D" parent="Contact"]
+position = Vector2(0, -5)
+shape = SubResource("Contact")

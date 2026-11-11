@@ -29,3 +29,5 @@ jobs:
         run: Godot_v4.6.3-stable_linux.x86_64 --headless --editor --import --quit
       - name: Run physics and route checks
         run: Godot_v4.6.3-stable_linux.x86_64 --headless --script tests/test_forest.gd --fixed-fps 60
+      - name: Run combat, camera and restart checks
+        run: Godot_v4.6.3-stable_linux.x86_64 --headless --script tests/test_combat.gd --fixed-fps 60

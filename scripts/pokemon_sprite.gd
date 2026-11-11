@@ -3,7 +3,7 @@ extends Sprite2D
 @export var pokemon: String = "pikachu"
 
 func _ready() -> void:
-	var image: Image = load("res://assets/sprites/%s.png" % pokemon).get_image()
+	var image: Image = load("res://assets/sprites/%s.png" % pokemon).get_image().duplicate()
 	image.convert(Image.FORMAT_RGBA8)
 	var background := image.get_pixel(0, 0)
 	var pending: Array[Vector2i] = []
@@ -18,7 +18,7 @@ func _ready() -> void:
 		var p: Vector2i = pending.pop_back()
 		if p.x < 0 or p.y < 0 or p.x >= size.x or p.y >= size.y:
 			continue
-		if image.get_pixelv(p) != background:
+		if image.get_pixelv(p).a == 0.0 or image.get_pixelv(p) != background:
 			continue
 		image.set_pixelv(p, Color.TRANSPARENT)
 		for step in [Vector2i.LEFT, Vector2i.RIGHT, Vector2i.UP, Vector2i.DOWN]:

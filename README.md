@@ -5,11 +5,32 @@
 Download this branch as a ZIP from **Code → Download ZIP**, extract it, import
 `project.godot` in Godot 4.6.x Standard, and press **F5**. No Python, .NET,
 plugins, or runtime downloads are required. Move with WASD/arrows, sprint with
-Shift, hold Tab for the map, and use Esc to pause.
+Shift, hold Tab for the map, use Esc to pause, and Space/J for a directional shock.
 
-GitHub Actions imports the project and runs the 19 physics and route checks on
+GitHub Actions imports the project and runs all 51 physics, route, combat, camera, and restart checks on
 pushes and pull requests. Generated `.godot` caches and exported ZIPs are excluded
 from Git. See [asset credits](ASSET_CREDITS.md) for the supplied materials.
+
+
+## Lab upgrade: camera, animation, enemies, and restart
+
+- **Camera:** smooth Camera2D following, clamped to the 2304 × 1536 level. The camera never reveals space beyond the forest, including at the world corners.
+- **Player animation:** procedural idle breathing, walking/running bounce and squash, left/right flipping, upward facing tint, and a four-direction facing indicator. Shock attacks have animated lightning and a distinct pose; death rotates and fades Pikachu.
+- **Enemies:** three purple Ekans patrol independently in the clearing, forest passage, and sanctuary. Each is a reusable `scenes/enemy.tscn` CharacterBody2D with world collisions and a separate Area2D for contact detection. Defeated enemies spin and fade away.
+- **Life and restart:** unprotected enemy contact makes Pikachu faint. Movement and attacks stop; after one second the entire scene reloads. Player position, collected markers, enemies, patrol positions, cooldowns, and pause state reset. **R** also performs a complete restart.
+- **Bonus combat:** face an enemy and press **Space** or **J** to use an electric shock. It reaches 96 pixels in a forward cone, stays active for 0.28 seconds, and has a 0.65-second cooldown. A successful shock defeats the enemy before contact damage is resolved. Approaching from behind or attacking while recharging remains dangerous. Pause freezes enemy patrols and combat timers.
+
+No extra assets, plugins, or runtime downloads are needed. Open `project.godot` with **Godot 4.6.3 Standard** and press **F5**.
+
+Run both suites after importing assets:
+
+```sh
+godot --headless --editor --import --quit
+godot --headless --script tests/test_forest.gd --fixed-fps 60
+godot --headless --script tests/test_combat.gd --fixed-fps 60
+```
+
+The original suite has 19 checks; the new suite has 32 checks covering enemy movement, world collisions, pause, directional animations, attack range/cooldown/defeat, camera bounds, contact death, and actual automatic/manual scene reloads.
 
 Готово top-down ниво за лабораториска вежба во **Godot 2D**, изработено со
 материјалите од приложениот Python/Pygame проект. Ова е самостоен Godot проект

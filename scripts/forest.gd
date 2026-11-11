@@ -4,6 +4,8 @@ const MARKERS := [Vector2(576,1180),Vector2(1216,900),Vector2(1920,384)]
 var visited: Array[bool] = [false,false,false]
 var paused := false
 var muted := false
+var restart_time := -1.0
+var restarting := false
 @onready var player: CharacterBody2D = $World/Player
 @onready var music: AudioStreamPlayer = $Music
 @onready var hud: Control = $HUD/Interface
@@ -13,7 +15,7 @@ func _ready() -> void:
 		"move_left": [KEY_A,KEY_LEFT], "move_right": [KEY_D,KEY_RIGHT],
 		"move_up": [KEY_W,KEY_UP], "move_down": [KEY_S,KEY_DOWN],
 		"sprint": [KEY_SHIFT], "reset": [KEY_R], "pause_game": [KEY_ESCAPE],
-		"mute": [KEY_M], "map": [KEY_TAB]
+		"mute": [KEY_M], "map": [KEY_TAB], "attack": [KEY_SPACE, KEY_J]
 	}
 	for action in bindings:
 		if not InputMap.has_action(action):
@@ -21,7 +23,9 @@ func _ready() -> void:
 		for key in bindings[action]:
 			var event := InputEventKey.new()
 			event.physical_keycode = key
-			InputMap.action_add_event(action,event)
+			if not InputMap.action_has_event(action,event):
+				InputMap.action_add_event(action,event)
+	player.died.connect(_on_player_died)
 	var track := music.stream as AudioStreamWAV
 	track.loop_mode = AudioStreamWAV.LOOP_FORWARD
 	track.loop_end = int(track.get_length() * track.mix_rate)
@@ -29,20 +33,35 @@ func _ready() -> void:
 	if music_enabled and DisplayServer.get_name() != "headless":
 		music.play()
 
+func _on_player_died() -> void:
+	restart_time = 1.0
+	paused = false
+
+func restart_level() -> void:
+	if restarting:
+		return
+	restarting = true
+	get_tree().call_deferred("reload_current_scene")
+
+func _physics_process(delta: float) -> void:
+	if restart_time >= 0.0:
+		restart_time -= delta
+		if restart_time <= 0.0:
+			restart_level()
+
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("reset"):
+		restart_level()
+	if player.dead or restarting:
+		hud.queue_redraw()
+		return
 	if Input.is_action_just_pressed("pause_game"):
 		paused = not paused
 		player.controls_enabled = not paused
+		player.velocity = Vector2.ZERO
 	if Input.is_action_just_pressed("mute"):
 		muted = not muted
 		music.volume_db = -80 if muted else -22
-	if Input.is_action_just_pressed("reset"):
-		player.position = Vector2(320,1180)
-		player.velocity = Vector2.ZERO
-		player.get_node("Camera2D").reset_smoothing()
-		visited = [false,false,false]
-		paused = false
-		player.controls_enabled = true
 	if not paused:
 		for i in MARKERS.size():
 			if player.position.distance_to(MARKERS[i]) < 55:
